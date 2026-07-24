@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gradex | Students</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="student.css" />
+</head>
+
+<body>
+  <div class="app">
+    <!--sidebar-->
+    <div class="sidebar">
+
+      <div class="sb-logo">
+        <div class="sb-dot"></div>
+        <span class="sb-name">Gradex</span>
+      </div>
+
+      <div class="sb-menu">
+        <div class="sb-item" tabindex="-1" onclick="window.location.href='../dashboard/dashboard.html'">
+          📊 Dashboard
+        </div>
+        <div class="sb-item" tabindex="-1" onclick="window.location.href='../assignment/assignment.html'">
+          📝 Assignments
+        </div>
+        <div class="sb-item" tabindex="-1" onclick="window.location.href='../review/review.html'">
+          ✅ Review Grades
+        </div>
+        <div class="sb-item active" tabindex="-1">
+          👥 Students
+        </div>
+        <div class="sb-item" tabindex="-1" onclick="window.location.href='../analytics/analytics.html'">
+          📈 Analytics
+        </div>
+        <div class="sb-item" tabindex="-1" onclick="window.location.href='../setting/setting.html'">
+          ⚙️ Settings
+        </div>
+      </div>
+
+      <div class="sb-footer">
+        <div class="sb-user">
+          <div class="sb-avatar">RS</div>
+          <div class="sb-uname">Rajesh Sir</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--main-->
+    <main class="main">
+
+      <div class="topbar">
+        <div class="topbar-title">Students</div>
+        <div class="topbar-right">
+          <input type="text" class="search-input" placeholder=" Search students..." />
+          <select class="range-select">
+            <option>Class X - A</option>
+            <option>Class X - B</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="greeting">
+        <div class="greeting-text">Manage your class roster</div>
+        <div class="greeting-sub">Class X — A & B · Science</div>
+      </div>
+
+      <!--metric -->
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-label">👥 Total Students</div>
+          <div class="metric-val blue">48</div>
+          <div class="metric-sub">across both sections</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">🏆 Top Performer</div>
+          <div class="metric-val purple">98.2</div>
+          <div class="metric-sub">Ananya Sharma</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">⚠️ Needs Attention</div>
+          <div class="metric-val red">4</div>
+          <div class="metric-sub">below 50% average</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">📈 Class Average</div>
+          <div class="metric-val green">82.4</div>
+          <div class="metric-sub">across all graded work</div>
+        </div>
+      </div>
+
+      <!--table-->
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">📋 Student Roster</div>
+          <span class="badge badge-purple">48 students</span>
+        </div>
+
+        <table class="student-table">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Roll No.</th>
+              <th>Section</th>
+              <th>Average</th>
+              <th>Completion</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="student-cell">
+                  <div class="s-avatar">AS</div>
+                  <span>Ananya Sharma</span>
+                </div>
+              </td>
+              <td>01</td>
+              <td>X - A</td>
+              <td class="score-good">98.2</td>
+              <td>100%</td>
+              <td><span class="status status-good">Excellent</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="student-cell">
+                  <div class="s-avatar">RK</div>
+                  <span>Rohan Kapoor</span>
+                </div>
+              </td>
+              <td>02</td>
+              <td>X - A</td>
+              <td class="score-good">89.5</td>
+              <td>95%</td>
+              <td><span class="status status-good">Excellent</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="student-cell">
+                  <div class="s-avatar">MP</div>
+                  <span>Meera Patel</span>
+                </div>
+              </td>
+              <td>03</td>
+              <td>X - B</td>
+              <td class="score-mid">74.1</td>
+              <td>88%</td>
+              <td><span class="status status-mid">Good</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="student-cell">
+                  <div class="s-avatar">SV</div>
+                  <span>Siddharth Verma</span>
+                </div>
+              </td>
+              <td>04</td>
+              <td>X - B</td>
+              <td class="score-low">42.3</td>
+              <td>60%</td>
+              <td><span class="status status-low">At Risk</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="student-cell">
+                  <div class="s-avatar">NJ</div>
+                  <span>Nisha Joshi</span>
+                </div>
+              </td>
+              <td>05</td>
+              <td>X - A</td>
+              <td class="score-mid">68.9</td>
+              <td>92%</td>
+              <td><span class="status status-mid">Good</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="students.js"></script>
+</body>
+
+</html>

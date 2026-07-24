@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gradex | Assignments</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assignment.css" />
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+
+      <div class="sb-logo">
+        <div class="sb-dot"></div>
+        <span class="sb-name">Gradex</span>
+      </div>
+
+      <div class="sb-menu">
+        <div class="sb-item" tabindex="-1" onclick="window.location.href='../dashboard/dashboard.html'">
+          📊 Dashboard
+        </div>
+        <div class="sb-item active" tabindex="-1">
+          📝 Assignments
+        </div>
+        <div class="sb-item" tabindex="-1"
+         onclick="window.location.href='../review/review.html'">
+          ✅ Review Grades
+        </div>
+
+        <div class="sb-item" tabindex="-1" onclick="window.location.href='../student/student.html'">
+          👥 Students
+        </div>
+
+        <div class="sb-item" tabindex="-1"
+         onclick="window.location.href='../analytics/analytics.html'">
+          📈 Analytics
+        </div>
+        <div class="sb-item" tabindex="-1"
+        onclick="window.location.href='../setting/setting.html'">
+          ⚙️ Settings
+        </div>
+      </div>
+
+      <div class="sb-footer">
+        <div class="sb-user">
+          <div class="sb-avatar">RS</div>
+          <div class="sb-uname">Rajesh Sir</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main">
+
+      <header class="page-header">
+        <h1>Assignments</h1>
+        <button class="btn-primary" id="btn-new-assignment">
+          + New Assignment
+        </button>
+      </header>
+
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="active">Active</button>
+        <button class="tab" data-filter="completed">Completed</button>
+        <button class="tab" data-filter="draft">Draft</button>
+      </div>
+
+      <section class="assignment-grid" id="assignment-grid">
+
+        <article class="assignment-card" data-status="active">
+          <div class="card-top">
+            <div class="icon-box icon-coral">📝</div>
+            <span class="status status-active">Active</span>
+          </div>
+          <h3 class="card-title">Chapter 5 — Photosynthesis Essay</h3>
+          <p class="card-meta">Due 18 July &middot; 38/48 submitted</p>
+          <div class="progress">
+            <div class="progress-fill" style="width:79%; background:#0EA5E9;">
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-ghost" onclick="window.location.href='../review/review.html'">
+              View submissions
+            </button>
+            <button class="btn-ghost">Edit</button>
+          </div>
+        </article>
+
+        <article class="assignment-card" data-status="completed">
+          <div class="card-top">
+            <div class="icon-box icon-green">📋</div>
+            <span class="status status-active">Active</span>
+          </div>
+          <h3 class="card-title">Quiz 3 — Periodic Table</h3>
+          <p class="card-meta">Due 16 July &middot; 48/48 submitted</p>
+          <div class="progress">
+            <div class="progress-fill" style="width:100%; background:#22c55e;">
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-ghost" onclick="window.location.href='../review/review.html'">
+              View submissions
+            </button>
+            <button class="btn-ghost">Edit</button>
+          </div>
+        </article>
+
+        <article class="assignment-card" data-status="active">
+          <div class="card-top">
+            <div class="icon-box icon-blue">🔬</div>
+            <span class="status status-due">Due soon</span>
+          </div>
+          <h3 class="card-title">Lab Report — Newton's Laws</h3>
+          <p class="card-meta">Due 20 July &middot; 12/48 submitted</p>
+          <div class="progress">
+            <div class="progress-fill" style="width:25%; background:#f59e0b;">
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-ghost" onclick="window.location.href='../review/review.html'">
+              View submissions
+            </button>
+            <button class="btn-ghost">Edit</button>
+          </div>
+        </article>
+
+        <article class="assignment-card assignment-card-empty" id="create-assignment"
+          onclick="window.location.href='../assignment/create.html'">
+          + Create new assignment
+        </article>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="assignment.js"></script>
+</body>
+
+</html>

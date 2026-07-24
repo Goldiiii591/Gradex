@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradex | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- ===== SIDEBAR ===== -->
+        <div class="sidebar">
+
+            <div class="sb-logo">
+                <div class="sb-dot"></div>
+                <span class="sb-name">Gradex</span>
+            </div>
+
+            <div class="sb-menu">
+                <div class="sb-item active" tabindex="-1">
+                    📊 Dashboard
+                </div>
+                <div class="sb-item" tabindex="-1"
+                    onclick="window.location.href='../assignment/assignment.html'">
+                    📝 Assignments
+                </div>
+                <div class="sb-item" tabindex="-1"
+                    onclick="window.location.href='../review/review.html'">
+                    ✅ Review Grades
+                </div>
+                <div class="sb-item" tabindex="-1"
+                onclick="window.location.href='../student/student.html'">
+                 👥 Students
+                 </div>
+                <div class="sb-item" tabindex="-1"
+                onclick="window.location.href='../analytics/analytics.html'">
+                    📈 Analytics
+                </div>
+                <div class="sb-item" tabindex="-1"
+                onclick="window.location.href='../setting/setting.html'">
+                    ⚙️ Settings
+                </div>
+            </div>
+
+            <div class="sb-footer">
+                <div class="sb-user">
+                    <div class="sb-avatar">RS</div>
+                    <div class="sb-uname">Rajesh Sir</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <div class="main">
+
+            <div class="topbar">
+                <div class="topbar-title">Teacher Dashboard</div>
+                <div class="topbar-right">
+                    <button class="btn-new"
+                        onclick="window.location.href='../assignment/assignment.html'">
+                        + New Assignment
+                    </button>
+                </div>
+            </div>
+
+            <div class="greeting">
+                <div class="greeting-text">Namaskar, Rajesh Sir 🙏</div>
+                <div class="greeting-sub">
+                    Wednesday, 15 July 2025 · Class X — Science
+                </div>
+            </div>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    <div class="metric-label">👥 Total Students</div>
+                    <div class="metric-val sky">48</div>
+                    <div class="metric-sub">Class X — A & B</div>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-label">✅ Graded This Week</div>
+                    <div class="metric-val green">36</div>
+                    <div class="metric-sub">out of 48 submitted</div>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-label">⏱️ Hours Saved</div>
+                    <div class="metric-val purple">8.5 hrs</div>
+                    <div class="metric-sub">by AI this week</div>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-label">⚠️ Pending Review</div>
+                    <div class="metric-val red">12</div>
+                    <div class="metric-sub">need your approval</div>
+                </div>
+
+            </div>
+
+            <div class="section-row">
+
+                <div class="card">
+                    <div class="card-head">
+                        <div class="card-title">📝 Active Assignments</div>
+                        <span class="badge badge-sky">3 Active</span>
+                    </div>
+
+                    <div class="asgn-row">
+                        <div class="asgn-icon ic-sky">✏️</div>
+                        <div class="asgn-info">
+                            <div class="asgn-name">Chapter 5 — Photosynthesis Essay</div>
+                            <div class="asgn-sub">Due 18 July · 38/48 submitted</div>
+                            <div class="prog">
+                                <div class="prog-fill fill-sky" style="width: 79%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="asgn-row">
+                        <div class="asgn-icon ic-green">📋</div>
+                        <div class="asgn-info">
+                            <div class="asgn-name">Quiz 3 — Periodic Table</div>
+                            <div class="asgn-sub">Due 16 July · 48/48 submitted</div>
+                            <div class="prog">
+                                <div class="prog-fill fill-green" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="asgn-row">
+                        <div class="asgn-icon ic-purple">🔬</div>
+                        <div class="asgn-info">
+                            <div class="asgn-name">Lab Report — Newton's Laws</div>
+                            <div class="asgn-sub">Due 20 July · 12/48 submitted</div>
+                            <div class="prog">
+                                <div class="prog-fill fill-purple" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-head">
+                        <div class="card-title">✅ Pending Reviews</div>
+                        <span class="badge badge-purple">12 Waiting</span>
+                    </div>
+
+                    <div class="stud-row">
+                        <div class="stud-av av1">AK</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Ananya Krishnan</div>
+                            <div class="stud-sub">Photosynthesis Essay · AI: 84/100</div>
+                        </div>
+                        <span class="score sc-purple"
+                            onclick="window.location.href='../review/review.html'">
+                            Review
+                        </span>
+                    </div>
+
+                    <div class="stud-row">
+                        <div class="stud-av av2">RV</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Rohan Verma</div>
+                            <div class="stud-sub">Photosynthesis Essay · AI: 91/100</div>
+                        </div>
+                        <span class="score sc-green"
+                            onclick="window.location.href='../review/review.html'">
+                            Approve
+                        </span>
+                    </div>
+
+                    <div class="stud-row">
+                        <div class="stud-av av3">PS</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Priya Sharma</div>
+                            <div class="stud-sub">Quiz 3 · AI: 76/100</div>
+                        </div>
+                        <span class="score sc-purple"
+                            onclick="window.location.href='../review/review.html'">
+                            Review
+                        </span>
+                    </div>
+
+                    <div class="stud-row">
+                        <div class="stud-av av4">DM</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Dev Mehta</div>
+                            <div class="stud-sub">Quiz 3 · AI: 88/100</div>
+                        </div>
+                        <span class="score sc-green"
+                            onclick="window.location.href='../review/review.html'">
+                            Approve
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="insight">
+                💡 <strong>AI Insight:</strong>
+                60% of students scored below average on
+                <strong>diagram labelling</strong> in Quiz 3.
+                Consider a revision class before the next test.
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

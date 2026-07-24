@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradex | Settings</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="setting.css">
+</head>
+
+<body>
+
+<div class="app">
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="sb-logo">
+            <div class="sb-dot"></div>
+            <span class="sb-name">Gradex</span>
+        </div>
+
+        <div class="sb-menu">
+
+            <div class="sb-item"
+                onclick="window.location.href='../dashboard/dashboard.html'">
+                📊 Dashboard
+            </div>
+
+            <div class="sb-item"
+                onclick="window.location.href='../assignment/assignment.html'">
+                📝 Assignments
+            </div>
+
+            <div class="sb-item"
+                onclick="window.location.href='../review/review.html'">
+                ✅ Review Grades
+            </div>
+
+            <div class="sb-item"
+                onclick="window.location.href='../student/student.html'">
+                👥 Students
+            </div>
+
+            <div class="sb-item"
+                onclick="window.location.href='../analytics/analytics.html'">
+                📈 Analytics
+            </div>
+
+            <div class="sb-item active">
+                ⚙️ Settings
+            </div>
+
+        </div>
+
+        <div class="sb-footer">
+            <div class="sb-user">
+                <div class="sb-avatar">RS</div>
+                <div class="sb-uname">Rajesh Sir</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <header class="page-header">
+            <div>
+                <h1>⚙️ Settings</h1>
+                <p>Manage your account and preferences.</p>
+            </div>
+
+            <button type="button" class="btn-primary">
+                Save Changes
+            </button>
+        </header>
+
+        <section class="settings-section">
+
+            <h2>Profile</h2>
+
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input
+                    id="fullname"
+                    type="text"
+                    value="Rajesh Sir">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    id="email"
+                    type="email"
+                    value="rajesh@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="school">School</label>
+                <input
+                    id="school"
+                    type="text"
+                    value="ABC Public School">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                    id="subject"
+                    type="text"
+                    value="Science">
+            </div>
+
+            <hr>
+
+            <h2>Security</h2>
+
+            <div class="form-group">
+                <label for="current-password">Current Password</label>
+                <input
+                    id="current-password"
+                    type="password"
+                    placeholder="Enter current password">
+            </div>
+
+            <div class="form-group">
+                <label for="new-password">New Password</label>
+                <input
+                    id="new-password"
+                    type="password"
+                    placeholder="Enter new password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                    id="confirm-password"
+                    type="password"
+                    placeholder="Confirm new password">
+            </div>
+
+            <hr>
+
+            <h2>Preferences</h2>
+
+            <div class="checkbox-group">
+
+                <label for="email-notification">
+                    <input
+                        id="email-notification"
+                        type="checkbox"
+                        checked>
+                    Email Notifications
+                </label>
+
+                <label for="assignment-reminder">
+                    <input
+                        id="assignment-reminder"
+                        type="checkbox"
+                        checked>
+                    Assignment Reminders
+                </label>
+
+                <label for="weekly-report">
+                    <input
+                        id="weekly-report"
+                        type="checkbox">
+                    Weekly Report
+                </label>
+
+            </div>
+
+            <div class="theme-box">
+
+                <label for="theme">Theme</label>
+
+                <select id="theme">
+                    <option>Light</option>
+                    <option>Dark</option>
+                </select>
+
+            </div>
+
+            <div class="btn-row">
+
+                <button type="button" class="btn-primary">
+                    Save Changes
+                </button>
+
+                <button type="button" class="btn-danger">
+                    Logout
+                </button>
+            </div>
+        </section>
+    </main>
+</div>
+<!-- <script src="setting.js"></script> -->
+</body>
+</html>

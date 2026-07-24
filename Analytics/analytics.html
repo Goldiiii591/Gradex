@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradex | Analytics</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="analytics.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!--SIDEBAR-->
+        <div class="sidebar">
+
+            <div class="sb-logo">
+                <div class="sb-dot"></div>
+                <span class="sb-name">Gradex</span>
+            </div>
+
+            <div class="sb-menu">
+                <a href="../dashboard/dashboard.html" class="sb-item">📊 Dashboard</a>
+                <a href="../assignment/assignment.html" class="sb-item">📝 Assignments</a>
+                <a href="../review/review.html" class="sb-item">✅ Review Grades</a>
+                <a href="../student/student.html" class="sb-item">👥 student</a>
+                <div class="sb-item active" id="nav-analytics">📈 Analytics</div>
+                <a href="../setting/setting.html" class="sb-item">⚙️ Settings</a>
+        </div>
+
+        <div class="sb-footer">
+            <div class="sb-user">
+                <div class="sb-avatar">RS</div>
+                <div class="sb-uname">Rajesh Sir</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--MAIN CONTENT-->
+    <div class="main">
+
+        <div class="topbar">
+            <div class="topbar-title">Analytics</div>
+            <div class="topbar-right">
+                <select class="range-select">
+                    <option>This week</option>
+                    <option>This month</option>
+                    <option>This term</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="greeting">
+            <div class="greeting-text">Class performance overview</div>
+            <div class="greeting-sub">Class X — A & B · Science</div>
+        </div>
+
+        <!--METRIC CARDS-->
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-label">📊 Average Score</div>
+                <div class="metric-val blue">82.4</div>
+                <div class="metric-sub">across all graded work</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">✅ Completion Rate</div>
+                <div class="metric-val green">92%</div>
+                <div class="metric-sub">assignments submitted on time</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">🤖 AI Accuracy</div>
+                <div class="metric-val purple">96%</div>
+                <div class="metric-sub">matched your final grades</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">⏱️ Hours Saved</div>
+                <div class="metric-val amber">31 hrs</div>
+                <div class="metric-sub">by AI grading this term</div>
+            </div>
+        </div>
+
+        <!--TWO COLUMN SECTION-->
+        <div class="section-row">
+
+            <!-- Grading confidence donut -->
+            <div class="card">
+                <div class="card-head">
+                    <div class="card-title">🎯 Grading Confidence</div>
+                    <span class="badge badge-purple">12 pending</span>
+                </div>
+
+                <div class="donut-wrap">
+                    <div class="donut" style="--p1:41.6%;"></div>
+                    <div class="donut-center">
+                        <div class="donut-num">58%</div>
+                        <div class="donut-label">high confidence</div>
+                    </div>
+                </div>
+
+                <div class="legend">
+                    <div class="legend-row">
+                        <span class="dot dot-purple"></span>
+                        <span class="legend-text">High confidence</span>
+                        <span class="legend-val">5</span>
+                    </div>
+                    <div class="legend-row">
+                        <span class="dot dot-sky"></span>
+                        <span class="legend-text">Needs review</span>
+                        <span class="legend-val">7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Score distribution -->
+            <div class="card">
+                <div class="card-head">
+                    <div class="card-title">📈 Score Distribution</div>
+                    <span class="badge badge-amber">Quiz 3</span>
+                </div>
+
+                <div class="dist-row">
+                    <div class="dist-label">90 - 100</div>
+                    <div class="dist-bar">
+                        <div class="dist-fill fill-teal" style="width:35%"></div>
+                    </div>
+                    <div class="dist-count">17</div>
+                </div>
+                <div class="dist-row">
+                    <div class="dist-label">70 - 89</div>
+                    <div class="dist-bar">
+                        <div class="dist-fill fill-sky" style="width:60%"></div>
+                    </div>
+                    <div class="dist-count">29</div>
+                </div>
+                <div class="dist-row">
+                    <div class="dist-label">50 - 69</div>
+                    <div class="dist-bar">
+                        <div class="dist-fill fill-amber" style="width:18%"></div>
+                    </div>
+                    <div class="dist-count">9</div>
+                </div>
+                <div class="dist-row">
+                    <div class="dist-label">Below 50</div>
+                    <div class="dist-bar">
+                        <div class="dist-fill fill-red" style="width:6%"></div>
+                    </div>
+                    <div class="dist-count">3</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--AI INSIGHT BOX-->
+        <div class="insight">
+            💡 <strong>AI Insight:</strong>
+            60% of students scored below average on
+            <strong>diagram labelling</strong> in Quiz 3.
+            Consider a revision class before the next test.
+        </div>
+
+    </div>
+    </div>
+
+    <script src="analytics.js"></script>
+</body>
+
+</html>

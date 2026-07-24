@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gradex | Review Grades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="review.css"/>
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- ===== SIDEBAR ===== -->
+        <div class="sidebar">
+            <div class="sb-logo">
+                <div class="sb-dot"></div>
+                <span class="sb-name">Gradex</span>
+            </div>
+            <div class="sb-menu">
+                <div class="sb-item"
+                    onclick="window.location.href='../dashboard/dashboard.html'">
+                    📊 Dashboard
+                </div>
+                <div class="sb-item"
+                    onclick="window.location.href='../assignment/assignment.html'">
+                    📝 Assignments
+                </div>
+                <div class="sb-item active">
+                    ✅ Review Grades
+                </div>
+                <div class="sb-item"
+                     onclick="window.location.href='../student/student.html'">
+                    👥 Students
+                </div>
+                <div class="sb-item"
+                onclick="window.location.href='../analytics/analytics.html'">
+                    📈 Analytics
+                </div>
+                <div class="sb-item"
+                onclick="window.location.href='../setting/setting.html'">
+                    ⚙️ Settings
+                </div>
+            </div>
+            <div class="sb-footer">
+                <div class="sb-user">
+                    <div class="sb-avatar">RS</div>
+                    <div class="sb-uname">Rajesh Sir</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <div class="main">
+
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="topbar-title">Review Grades</div>
+                <div class="topbar-right">
+                    <div class="filter-wrap">
+                        <select class="filter-select" id="assignment-filter">
+                            <option>All assignments</option>
+                            <option>Photosynthesis Essay</option>
+                            <option>Quiz 3 — Periodic Table</option>
+                            <option>Lab Report — Newton</option>
+                        </select>
+                    </div>
+                    <button class="btn-approve-all" id="approve-all-btn">
+                        ✅ Approve all
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats row -->
+            <div class="review-stats">
+                <div class="rstat">
+                    <div class="rstat-label">⏳ Pending review</div>
+                    <div class="rstat-val sky" id="pending-count">4</div>
+                </div>
+                <div class="rstat">
+                    <div class="rstat-label">✅ Approved today</div>
+                    <div class="rstat-val green" id="approved-count">8</div>
+                </div>
+                <div class="rstat">
+                    <div class="rstat-label">🤖 AI accuracy</div>
+                    <div class="rstat-val purple">94%</div>
+                </div>
+                <div class="rstat">
+                    <div class="rstat-label">⏱️ Time saved</div>
+                    <div class="rstat-val sky">3.2 hrs</div>
+                </div>
+            </div>
+
+            <!-- Main review layout -->
+            <div class="review-layout">
+
+                <!-- LEFT — student list -->
+                <div class="student-list" id="student-list">
+                    <div class="list-header">
+                        <div class="list-title">Students — 4 pending</div>
+                        <div class="list-sub">Click a student to review</div>
+                    </div>
+
+                    <!-- Student cards -->
+                    <div class="stud-card active" id="card-0" onclick="selectStudent(0)">
+                        <div class="stud-av av1">AK</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Ananya Krishnan</div>
+                            <div class="stud-sub">Photosynthesis Essay</div>
+                        </div>
+                        <div class="stud-right">
+                            <div class="ai-score">84/100</div>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                    </div>
+
+                    <div class="stud-card" id="card-1" onclick="selectStudent(1)">
+                        <div class="stud-av av2">RV</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Rohan Verma</div>
+                            <div class="stud-sub">Photosynthesis Essay</div>
+                        </div>
+                        <div class="stud-right">
+                            <div class="ai-score">91/100</div>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                    </div>
+
+                    <div class="stud-card" id="card-2" onclick="selectStudent(2)">
+                        <div class="stud-av av3">PS</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Priya Sharma</div>
+                            <div class="stud-sub">Quiz 3 — Periodic Table</div>
+                        </div>
+                        <div class="stud-right">
+                            <div class="ai-score">76/100</div>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                    </div>
+
+                    <div class="stud-card" id="card-3" onclick="selectStudent(3)">
+                        <div class="stud-av av4">DM</div>
+                        <div class="stud-info">
+                            <div class="stud-name">Dev Mehta</div>
+                            <div class="stud-sub">Quiz 3 — Periodic Table</div>
+                        </div>
+                        <div class="stud-right">
+                            <div class="ai-score">88/100</div>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT — review panel -->
+                <div class="review-panel" id="review-panel">
+
+                    <!-- Student header -->
+                    <div class="panel-header">
+                        <div class="panel-stud-info">
+                            <div class="panel-av av1" id="panel-av">AK</div>
+                            <div>
+                                <div class="panel-name" id="panel-name">Ananya Krishnan</div>
+                                <div class="panel-sub" id="panel-sub">Photosynthesis Essay · Submitted 14 July</div>
+                            </div>
+                        </div>
+                        <div class="panel-score-box">
+                            <div class="panel-score-label">AI grade</div>
+                            <div class="panel-score-val" id="panel-score">84</div>
+                            <div class="panel-score-max">/100</div>
+                        </div>
+                    </div>
+
+                    <!-- Student submission -->
+                    <div class="submission-box">
+                        <div class="submission-label">📄 Student submission</div>
+                        <div class="submission-text" id="submission-text">
+                            Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to produce oxygen and energy in the form of glucose. The process takes place mainly in the leaves of plants. Chlorophyll, the green pigment found in chloroplasts, absorbs sunlight and uses this energy to convert carbon dioxide from the air and water from the soil into glucose. Oxygen is released as a by-product of this reaction. This process is fundamental to life on Earth as it forms the basis of most food chains and is responsible for the oxygen we breathe...
+                        </div>
+                    </div>
+
+                    <!-- Rubric scoring -->
+                    <div class="rubric-section">
+                        <div class="rubric-section-title">📏 Rubric scoring — edit if needed</div>
+
+                        <div class="rubric-score-row">
+                            <div class="rubric-score-name">Content and understanding</div>
+                            <div class="rubric-score-controls">
+                                <button class="score-btn" onclick="adjustScore('r1', -1)">−</button>
+                                <span class="score-display" id="r1">20</span>
+                                <span class="score-max">/25</span>
+                                <button class="score-btn" onclick="adjustScore('r1', 1)">+</button>
+                            </div>
+                        </div>
+
+                        <div class="rubric-score-row">
+                            <div class="rubric-score-name">Use of scientific terms</div>
+                            <div class="rubric-score-controls">
+                                <button class="score-btn" onclick="adjustScore('r2', -1)">−</button>
+                                <span class="score-display" id="r2">22</span>
+                                <span class="score-max">/25</span>
+                                <button class="score-btn" onclick="adjustScore('r2', 1)">+</button>
+                            </div>
+                        </div>
+
+                        <div class="rubric-score-row">
+                            <div class="rubric-score-name">Grammar and structure</div>
+                            <div class="rubric-score-controls">
+                                <button class="score-btn" onclick="adjustScore('r3', -1)">−</button>
+                                <span class="score-display" id="r3">21</span>
+                                <span class="score-max">/25</span>
+                                <button class="score-btn" onclick="adjustScore('r3', 1)">+</button>
+                            </div>
+                        </div>
+
+                        <div class="rubric-score-row">
+                            <div class="rubric-score-name">Conclusion quality</div>
+                            <div class="rubric-score-controls">
+                                <button class="score-btn" onclick="adjustScore('r4', -1)">−</button>
+                                <span class="score-display" id="r4">21</span>
+                                <span class="score-max">/25</span>
+                                <button class="score-btn" onclick="adjustScore('r4', 1)">+</button>
+                            </div>
+                        </div>
+
+                        <div class="total-score-row">
+                            <span>Total score</span>
+                            <span class="total-score-val" id="total-score">84 / 100</span>
+                        </div>
+                    </div>
+
+                    <!-- AI feedback -->
+                    <div class="feedback-section">
+                        <div class="feedback-label">AI generated feedback — edit before sending</div>
+                        <textarea class="feedback-textarea" id="feedback-text">Good understanding of photosynthesis with clear explanation of the process. Scientific terms like chlorophyll and chloroplasts are used correctly. Grammar is mostly correct throughout the essay. The conclusion could be stronger — consider adding the importance of photosynthesis to the food chain. Overall a good effort.</textarea>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="action-btns" id="action-btns">
+                        <button class="btn-skip" onclick="skipStudent()">
+                            ⏭ Skip for now
+                        </button>
+                        <button class="btn-approve" id="approve-btn" onclick="approveGrade()">
+                            Approve and send to student
+                        </button>
+                    </div>
+
+                    <!-- Approved message -->
+                    <div class="approved-msg" id="approved-msg" style="display:none;">
+                        Grade approved and feedback sent to Ananya Krishnan!
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="review.js"></script>
+
+</body>
+</html>
