@@ -1,144 +1,64 @@
-<div align="center">
+# Gradex — AI Grading Assistant
 
-# 🎓 Gradex
+🌐 **Live Demo** → https://gradex-pink.vercel.app
 
-### Smarter Grading for Modern Teachers
-
-AI-powered grading platform that helps teachers create assignments, manage students, review grades, and analyze classroom performance.
+> A complete frontend project built with HTML, CSS and JavaScript
 
 ---
 
-<img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-<img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+## Screenshots
 
-</div>
+### Landing Page
+![Landing Page](images/landing.png)
 
----
+### Login Page  
+![Login Page](images/login.png)
 
-# ✨ Features
+### Teacher Dashboard
+![Dashboard](images/dashboard.png)
 
-✅ Beautiful Landing Page
+### Assignment Page
+![Assignments](images/assignment.png)
 
-✅ Teacher Login
+### Review Grades
+![Review](images/review.png)
 
-✅ Interactive Dashboard
-
-✅ Assignment Management
-
-✅ Student Management
-
-✅ Review Grades
-
-✅ Analytics Dashboard
-
-✅ Settings Page
-
-✅ Responsive UI
+### Student Portal
+![Student](images/student.png)
 
 ---
 
-# 📸 Screenshots
+## Pages built
 
-## Landing Page
-
-(Add Screenshot Here)
-
----
-
-## Dashboard
-
-(Add Screenshot Here)
-
----
-
-## Assignments
-
-(Add Screenshot Here)
+| Page | Status |
+|------|--------|
+| Landing page | ✅ Done |
+| Login page | ✅ Done |
+| Teacher dashboard | ✅ Done |
+| Assignment page | ✅ Done |
+| Review grades | ✅ Done |
+| Student portal | ✅ Done |
+| Analytics | ✅ Done |
+| Settings | ✅ Done |
 
 ---
 
-## Analytics
-
-(Add Screenshot Here)
-
----
-
-## Settings
-
-(Add Screenshot Here)
-
----
-
-# 🛠 Tech Stack
-
+## Tech used
 - HTML5
-- CSS3
-- JavaScript
-- Google Fonts
+- CSS3 — Flexbox, Grid, Animations
+- Vanilla JavaScript
+- Google Fonts — Nunito + Inter
 
 ---
 
-# 📂 Project Structure
-
-```text
-Gradex
-│
-├── landing
-├── login
-├── dashboard
-├── assignment
-├── review
-├── analytics
-├── student
-├── settings
-├── images
-└── README.md
-```
-
----
-
-# 🚀 Future Improvements
-
-- React.js
-- Node.js
-- Express.js
-- MySQL
-- AI Essay Evaluation
-- Authentication
-- Teacher & Student Portal
-- Dark Mode
-- Cloud Database
-
----
-
-# 💻 Run Locally
-
-Clone the repository
-
+## How to run
+1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/Gradex.git
+   git clone https://github.com/Goldiiii591/Gradex.git
 ```
-
-Open
-
-```
-landing/index.html
-```
-
-in your browser.
+2. Open `index.html` in browser
+3. No setup needed!
 
 ---
 
-# ⭐ Support
-
-If you like this project,
-
-⭐ Star this repository.
-
----
-<div align="center">
-
-Made with ❤️ by **Goldi Mishra**
-
-</div>
+Built with ❤️ while learning frontend development
